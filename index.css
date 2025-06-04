@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800&display=swap');
+
+/* MENU E PÁGINA INICIAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --purple:#5d15bb;
+    --white:#fff;
+    --dark:#323233;
+}
+body{
+    color:var(--dark);
+    background: var(--white);
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    width: 100%;
+    background: var(--white);
+    position: fixed;
+    z-index: 1000;
+}
+
+.navigation .logo{
+    color: var(--purple);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.logo span{
+    color: var(--dark);     
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color: var(--purple)
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;    
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--purple);
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+    animation: scaleIn 1s ease-out 0s forwards;
+}
+
+.home-text{
+    max-width: 37rem;
+}
+.home-text .text-h4{
+    font-size: 1.5rem;
+    color: var(--purple);
+    margin-bottom: 1rem;
+}
+.home-text .text-h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4.4rem;
+}
+.home-text p{
+    margin-bottom: 4rem;
+}
+.home-btn{
+    padding: 15px 45px;
+    background: var(--purple);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.5s;
+} 
+.home-btn:hover{
+    background: #9d61ec;
+}
+.home-img{
+    width: 100%;
+}
+@media (max-width:785px){
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+}
+
+/* LOGIN E CADASTRO */
+
+#cadastro input::placeholder { 
+    color: #dbdbdb; 
+}
+.campo-imagem-upload {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.campo-imagem-upload label {
+    margin-bottom: 10px; 
+    font-weight: 500;
+}
+
+.campo-imagem-upload input[type="file"] {
+    width: 250px; 
+}
+
+#preview-foto {
+    min-width: 250px;
+    min-height: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
+    object-fit: cover; 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+
+.caixa{
+    margin: 50px;
+    background-color: #37138a;
+    height: auto;
+    width: 350px;
+    padding-top: 30px;
+    border-radius: 15%;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    animation: scaleIn 0.7s ease-out 0s forwards;
+}
+.relacionado{
+    background-image: url(imagens/fundo.png);
+    color: #fff;
+}
+
+.relacionado p{
+    padding-top: 15px;
+}
+.relacionado a{
+    text-decoration: none;
+    color: #86adf5;
+    font-weight: bold;
+}
+
+#cadastro{
+    padding-top: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.email input{
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: var(--purple);
+    color: #fff;
+    margin-top: 15px;
+}
+.login input{
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: var(--purple);
+    color: #fff;
+    margin-top: 15px;
+}
+.senha input{
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: var(--purple);
+    color: #fff;
+    margin-top: 15px;
+}
+
+.entrar input{
+    cursor: pointer;
+    width: 260px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--white);
+    color: var(--dark);
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.entrar input:hover{
+    background-color: var(--purple);
+    color: #fff;
+}
+
+#mensagem{
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeInSlideUp 0.5s ease-out;
+}
+
+.block{
+    display: block;
+    text-align: center;
+    background-color: #37138a;
+    color: var(--white);
+}
+
+#h1_texto{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* produtos */
+.block {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: transparent; 
+    color: var(--white);
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+#h1_texto {
+    color: var(--dark); 
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
+    padding-top: 50px;
+}
+
+.produto {
+    background-color: #7d34dd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300px;
+    margin: 10px; 
+    transition: all 0.5s;
+    animation: scaleIn 0.7s ease-out 0s forwards;
+}
+
+
+.produto .titulo {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px; 
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.produto:hover{
+    background-color: var(--purple);
+}
+
+.container-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    padding: 20px;
+    max-width: 1200px; 
+}
+
+table {
+    display: none; 
+}
+
+.container-produtos a{
+    color: rgb(55, 187, 204);
+}
+.container-produtos a:hover{
+    color: rgb(255, 255, 255);
+}
+
+#cadastro h1, a{
+    color: white;
+}
+
+.input-com-icone,
+.login, 
+.email,
+.senha {
+    display: flex;
+    align-items: center;
+    background-color: var(--purple); 
+    border-radius: 15px;
+    width: 250px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 50px;
+    padding: 0 15px; 
+    box-sizing: border-box; 
+    color: white;
+}
+.input-com-icone input,
+.login input,
+.email input,
+.senha input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    height: 100%;
+    outline: none;
+    padding: 5px; 
+}
+
+.input-com-icone textarea {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+}
